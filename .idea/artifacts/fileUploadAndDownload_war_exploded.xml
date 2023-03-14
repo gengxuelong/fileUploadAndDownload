@@ -1,13 +1,28 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="fileUploadAndDownload:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/fileUploadAndDownload_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/fileUploadAndDownload-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>fileUploadAndDownload</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
-      <element id="javaee-facet-resources" facet="fileUploadAndDownload/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="fileUploadAndDownload" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.5" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.11.0" />
+        </element>
       </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/fileUploadAndDownload-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="fileUploadAndDownload/web/Web" />
     </root>
   </artifact>
 </component>
